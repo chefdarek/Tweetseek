@@ -1,28 +1,30 @@
 from flask import Flask, render_template
 
+def create_app():
+    """ Create and configure an instance of the Flask application"""
+    app = Flask(__name__)
 
-""" Create and configure an instance of the Flask application"""
+    #app.route determines the page to route to after "/"
+    @app.route('/')
+    def root():
+        """render templates autolooks in the template folder"""
 
-app = Flask(__name__)
-
-#app.route determines the page to route to after "/"
-@app.route('/')
+        return render_template("home.html")
     
-def root():
-    """render templates autolooks in the template folder"""
+        return app
 
-    return render_template("home.html")
+    #@app.route("/templates")
+    #def preds():
+        #""" render the home.html template """
+        #return render_template("home.html")
 
-    return app
+    #@app.route("/about")
+    #def about():
+        """ render the about.html page """
 
-@app.route("/templates")
+        #return render_template("about.html")
 
-def preds():
-    return render_template("templates.html")
+#if __name__ == "__main__":
+ #   app.run(debug=True)
 
-@app.route("/about")
-def about():
-	return render_template("about.html")
 
-if __name__ == "__main__":
-	app.run(debug=True)

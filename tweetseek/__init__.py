@@ -1,5 +1,6 @@
 """Entry point for Tweetseek."""
-from app.py import create_app
 
-FLASK_APP = create_app()
+from .app import create_app
+
+APP = create_app()
 
