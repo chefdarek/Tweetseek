@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e410c7f0-1afd-4633-a1b0-455de4de3013" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweetseek/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tweetseek/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/templates.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,29 +16,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tweetseek/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+        <entry file="file://$PROJECT_DIR$/tweetseek/templates/templates.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="34">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+        <entry file="file://$PROJECT_DIR$/tweetseek/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29869">
-              <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+            <state relative-caret-position="272">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tweetseek/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -56,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/tweetseek/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -70,7 +79,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tweetseek/models.py" />
+        <option value="$PROJECT_DIR$/tweetseek/__init__.py" />
         <option value="$PROJECT_DIR$/tweetseek/app.py" />
+        <option value="$PROJECT_DIR$/tweetseek/templates/templates.html" />
+        <option value="$PROJECT_DIR$/tweetseek/templates/about.html" />
+        <option value="$PROJECT_DIR$/tweetseek/templates/home.html" />
       </list>
     </option>
   </component>
@@ -96,6 +109,12 @@
               <item name="Tweetseek" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tweetseek" type="462c0819:PsiDirectoryNode" />
               <item name="tweetseek" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweetseek" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tweetseek" type="462c0819:PsiDirectoryNode" />
+              <item name="tweetseek" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +184,7 @@
     <frame x="869" y="0" width="1046" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18849206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18849206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -186,6 +205,13 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29869">
+          <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -193,10 +219,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/tweetseek/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29869">
-          <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -210,14 +236,28 @@
     <entry file="file://$PROJECT_DIR$/tweetseek/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tweetseek/app.py">
+    <entry file="file://$PROJECT_DIR$/tweetseek/templates/templates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tweetseek/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tweetseek/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
