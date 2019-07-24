@@ -1,17 +1,17 @@
 from decouple import config
 from flask import Flask, render_template #request will need to be added later
-from .models import DB, User
-from .twitter import *
+from models import DB, User
+from twitter import *
 
 def create_app():
     """Create and configure an instance of the Flask application"""
     app = Flask(__name__)
-    #connects the database to the flask instance
-    #if the schema is changed you loose the data and have
-    #to re-instantiate it
-    #after the code is added below you must go to the flask shell in
-    #the Tweetseek/tweetseek folder run flask shell
-    #from tweetseek.models import * then add the data as variables
+    #  connects the database to the flask instance
+    #  if the schema is changed you loose the data and have
+    #  to re-instantiate it
+    #  after the code is added below you must go to the flask shell in
+    #  the Tweetseek/tweetseek folder run flask shell
+    #  from tweetseek.models import * then add the data as variables
 
     app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
     # gives err message codes and will update on the fly

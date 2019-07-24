@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 evil_corp = ["@Equifax","WellsFargo","Uber","Verizon","Nestle","InsidePMI","exxonmobil",
 "DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma"]
 
 evil_corps = ["RioTinto","Wal-Mart","facebook","Tinder","FoxNews","Google","McDonalds"]
 ------------------------------------------------------------------------------
 whats left = ["DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma",
+=======
+evil_corp = ["@Equifax","WellsFargo","Uber","Verizon","Nestle","InsidePMI","exxonmobil",
+"DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma"]
+
+evil_corps = ["RioTinto","Wal-Mart","facebook","Tinder","FoxNews","Google","McDonalds"]
+------------------------------------------------------------------------------
+whats left = ["DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma",
+>>>>>>> 529687b5f36c422c0ab8a0fab6739fcecd410dae
 "WalMart","facebook","Tinder","FoxNews","Google","McDonalds"]

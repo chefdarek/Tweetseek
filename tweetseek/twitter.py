@@ -25,7 +25,7 @@
 import tweepy
 import basilica
 from decouple import config
-from .models import DB, Tweet, User
+from models import DB, Tweet, User
 
 #  pass in the config from .env for authenticate
 TWITTER_AUTH = tweepy.OAuthHandler(config('TWITTER_CONSUMER_KEY'),
@@ -61,7 +61,7 @@ def new_set_pull_bed(handle, count=200):
 
     print(f"{handle} was put in the Database, with {count} tweets and embedded")
 
-#prompt method
+# #prompt method
 # answer = input ("Would you like to add a new user: y or n? ")
 #
 # answer = str(answer.lower())
@@ -72,7 +72,7 @@ def new_set_pull_bed(handle, count=200):
 #     new_set_pull_bed(handle, count)
 #
 # if answer == "n":
-#     print("Okay, if you would like to add a new user new_set_pull_bed(handle, count=200)")
+#     print("Okay, if you woeuld like to add a new user new_set_pull_bed(handle, count=200)")
 
 # TODO write some useful functions
 
