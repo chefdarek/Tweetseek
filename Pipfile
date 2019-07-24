@@ -9,6 +9,8 @@ verify_ssl = true
 flask = "*"
 tweepy = "*"
 flask-sqlalchemy = "*"
+python-decouple = "*"
+basilica = "*"
 
 [requires]
 python_version = "3.7"
