@@ -1,0 +1,7 @@
+evil_corp = ["@Equifax","WellsFargo","Uber","Verizon","Nestle","InsidePMI","exxonmobil",
+"DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma"]
+
+evil_corps = ["RioTinto","Wal-Mart","facebook","Tinder","FoxNews","Google","McDonalds"]
+------------------------------------------------------------------------------
+whats left = ["DowChemical", "GoldmanSachs","Mylan","BankofAmerica","purduepharma",
+"WalMart","facebook","Tinder","FoxNews","Google","McDonalds"]
