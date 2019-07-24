@@ -5,8 +5,19 @@
     <title>Flask Parent Template</title>
     <link rel="stylesheet" href="{{url_for('static',    filename='css/template.css') }}">
 </head>
-<body>
+
+<body BGCOLOR="#ffffcc">
+
+<CENTER><IMG SRC=https://i.gifer.com/JEMe.gif ALIGN="BOTTOM"> </CENTER>
+
+<h1>TweetSeek</h1>
+
     <header>
+        <ul>
+            {% for user in users %}
+             <li>{{user.name }}</li>
+            {% endfor %}
+        </ul>
       <div class="container">
         <h1 class="logo">First Web App</h1>
         <strong><nav>
