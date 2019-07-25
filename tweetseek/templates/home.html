@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <HTML>
-
-<HEAD>
+<link rel="stylesheet" href="https://unpkg.com/picnic"><HEAD>
 
 <TITLE>TweekSeek : Home</TITLE>
 
+
+<div>
+    <style>
+        body {
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        padding-bottom:100%;
+        background-image: url("http://pluspng.com/img-png/bird-hd-png-bird-bluebird-bird-png-nature-perched-isolated-960.png"),
+        url('https://i.gifer.com/JEMe.gif');
+        background-position: top;
+        background-repeat: no-repeat;
+        position: relative;
+
+
+}
+    </style>
+</div>
+
 </HEAD>
 
-<BODY BGCOLOR="#ffffcc">
-
-<a href="http://127.0.0.1:5000/about">About</a>
+<form action="http://127.0.0.1:5000/about" method="get" target="_blank">
+    <button type="http://127.0.0.1:5000/about" "padding: 5x 10px;">About</button><br>
+</form>
 
 <H1>Twits captured</H1>
 
@@ -18,9 +36,17 @@
         <li>{{user.name }}</li>
         {% endfor %}
   </ul>
+<H2>
+    <fieldset class="flex two">
+        <label><input type="User 1" placeholder="User 1"></label>
+        <label><input type="User 2" placeholder="User 2"></label>
+    </fieldset>
+    <textarea placeholder="Enter Tweet Here"></textarea>
 
+
+</H2>
 <HR>
 
-</BODY>
+
 
 </HTML> 

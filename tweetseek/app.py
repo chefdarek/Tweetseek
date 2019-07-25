@@ -1,5 +1,6 @@
 from decouple import config
 from flask import Flask, render_template #request will need to be added later
+# from waitress import serve
 from models import DB, User
 from twitter import *
 
@@ -64,6 +65,10 @@ def create_app():
                                message=message)
 
     return app
+
+# if __name__ == "__main__":
+#     #create_app.run()
+#     serve(create_app, host='0.0.0.0', port=80)
 
     #  Todo should add a login decorator over reset route for authorization of admin user to use function
     #  When it is run again the first time after change here you will have to use the reset route and will lose data

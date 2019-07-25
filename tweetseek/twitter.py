@@ -1,7 +1,7 @@
 """Retrieve Tweets, embeddings, and persist the database
     to add new user call new_user()
     to get user information or "status" at Flask shell >>> twitter_user = TWITTER.get_user('Austen')
-    >>> twitter_user
+    >>>  #twitter_user
     to get user tweets tweets = twitter_user.timeline()
     limit is 200 and default is 20 tweets
     to get specific tweets tweets[0].text shows the first sent back
@@ -17,7 +17,7 @@
     to get actually Twitter assigned i.d.'s >>> tweets[0].id
                                                 1153881708145463297
     to get embeddings from Basilica >>> tweet_text = tweets[0].full_text
-                                    >>> embedding = BASILICA.embed_sentence(
+                                    #>>> embedding = BASILICA.embed_sentence(
                                                     tweet_text, model='twitter')
     RETURNS embeddings of words from API in a python list
 """
