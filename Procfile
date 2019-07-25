@@ -1,0 +1,1 @@
+web: gunicorn tweetseek:create_app -t 120

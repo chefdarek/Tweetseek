@@ -11,6 +11,11 @@ tweepy = "*"
 flask-sqlalchemy = "*"
 python-decouple = "*"
 basilica = "*"
+python-dotenv = "*"
+scikit-learn = "*"
+heroku = "*"
+waitress = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
