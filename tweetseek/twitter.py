@@ -1,5 +1,5 @@
 """Retrieve Tweets, embeddings, and persist the database
-
+    to add new user call new_user()
     to get user information or "status" at Flask shell >>> twitter_user = TWITTER.get_user('Austen')
     >>> twitter_user
     to get user tweets tweets = twitter_user.timeline()
@@ -61,18 +61,47 @@ def new_set_pull_bed(handle, count=200):
 
     print(f"{handle} was put in the Database, with {count} tweets and embedded")
 
-# #prompt method
-# answer = input ("Would you like to add a new user: y or n? ")
-#
-# answer = str(answer.lower())
-#
-# if answer == "y":
-#     handle = str(input("What is the Twitter handle?:   "))
-#     count = int(input("Tweet count (default=200):  "))
-#     new_set_pull_bed(handle, count)
-#
-# if answer == "n":
-#     print("Okay, if you woeuld like to add a new user new_set_pull_bed(handle, count=200)")
+def add_or_update_user(name):
+    """for the html request add or update err if no or private user"""
+    try:
+        twitter_user = TWITTER.get_user(username) #  API queries to database
+        db_user = (User.query.get(twitter_user.id))  #  API Query to see if they exist
+        DB.session.add(db_user)
+        #  want as many recent non-retweet/reply statuses
+        tweets = twitteruser.timeline(
+            count=200, exclude_replies=True, include_rts=False,
+            tweet_mode='extended', since_id=db_user.newest_tweet_id)
+
+        if tweets:
+            # this will update the newest tweet id or not if none
+            db_user.newest_tweet_id = tweets[0].id
+        for tweet in tweets:
+            #get embedding for tweet and store in db
+            embedding = BASILICA.embed_sentence(tweet.full_text,
+                                                mode='twitter')
+            db_tweet = Tweet(id=tweet.id, tweet=tweet.full_text[:500],
+                             embedding=embedding)
+            db_user.tweets.append(db_tweet)
+            DB.session.add(db_tweet)
+    except Exception as e:
+        print('Error processing {}: {}'.format(username, e))
+        raise e
+    else:
+        DB.session.commit()
+
+def new_user():
+    """prompt to run Q&A for DB user entry"""
+    answer = input ("Would you like to add a new user: y or n? ")
+
+    answer = str(answer.lower())
+
+    if answer == "y":
+        handle = str(input("What is the Twitter handle?:"))
+        count = int(input("Tweet count (default=200):"))
+        return new_set_pull_bed(handle, count)
+
+    if answer == "n":
+        print("Okay, if you would like to add a new user new_set_pull_bed(handle, count=200)")
 
 # TODO write some useful functions
 

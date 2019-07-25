@@ -3,6 +3,7 @@ from flask import Flask, render_template #request will need to be added later
 from models import DB, User
 from twitter import *
 
+
 def create_app():
     """Create and configure an instance of the Flask application"""
     app = Flask(__name__)
@@ -14,15 +15,14 @@ def create_app():
     #  from tweetseek.models import * then add the data as variables
 
     app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
-    # gives err message codes and will update on the fly
-    #remove before public deploy
-    app.config['ENV'] = config('ENV')
-    #gives err message codes and will update otf
+    #  gives err message codes and will update on the fly
+
+    #  gives err message codes and will update off
 
     app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
     DB.init_app(app)
 
-    #app.route determines the page to route to after "/"
+    #  app.route determines the page to route to after "/"
 
     @app.route("/")
     def preds():
@@ -46,6 +46,22 @@ def create_app():
         DB.create_all()
         return render_template('home.html', title='DB Reset!', users=[])
 
+    @app.route("/user", methods=['POST'])
+    @app.route("/user/<name>", methods=['GET'])
+    def user(name=None):
+        message = ''
+        #import pdb; pdb.set_trace() sets the  python debugger
+        name = name or request.values['user_name']
+        try:
+            if request.method == 'POST':
+                add_or_update_user(name)
+                message = 'User {} successfully added'.format(name)
+            tweets = User.query.filter(User.name == name).one().tweets
+
+        except Exception as e:
+            pass
+        return render_tempate('user.html', title=name, tweets=tweets,
+                               message=message)
 
     return app
 
