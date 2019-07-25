@@ -15,10 +15,8 @@ python-dotenv = "*"
 scikit-learn = "*"
 heroku = "*"
 waitress = "*"
-gunicorn = "*"
 pyscopg2 = "*"
 pyscopg2-binary = "*"
-
 
 [requires]
 python_version = "3.7"

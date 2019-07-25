@@ -1,1 +1,1 @@
-web: gunicorn tweetseek:APP -t 120
+`web: waitress-serve --port=$PORT tweething:APP`
