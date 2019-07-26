@@ -1,7 +1,7 @@
 from decouple import config
 from flask import Flask, render_template #request will need to be added later
-from models import DB, User
-from twitter import *
+from .models import DB, User
+from .twitter import *
 
 
 def create_app():

@@ -25,7 +25,7 @@
 import tweepy
 import basilica
 from decouple import config
-from models import DB, Tweet, User
+from .models import DB, Tweet, User
 
 #  pass in the config from .env for authenticate
 TWITTER_AUTH = tweepy.OAuthHandler(config('TWITTER_CONSUMER_KEY'),

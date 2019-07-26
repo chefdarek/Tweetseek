@@ -1,4 +1,4 @@
-from models import User
+from .models import User
 from twitter import BASILICA
 import pickle
 import numpy as np
