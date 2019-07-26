@@ -1,1 +1,1 @@
-web: gunicorn tweetseek:APP
+web: gunicorn tweetseek:APP -t 120
