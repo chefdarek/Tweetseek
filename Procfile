@@ -1,1 +1,1 @@
-`web: waitress-serve --port=$PORT tweething:APP`
+`web: waitress-serve --port=$PORT tweetseek:APP`
