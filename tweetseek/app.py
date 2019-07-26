@@ -65,6 +65,5 @@ def create_app():
 
     return app
 
-
     #  Todo should add a login decorator over reset route for authorization of admin user to use function
     #  When it is run again the first time after change here you will have to use the reset route and will lose data

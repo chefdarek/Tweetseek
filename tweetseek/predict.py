@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 
 def predict_user(user1_name, user2_name, tweet_text):
-    "Determine which user is more likely to have authored a tweet"
+    """Determine which user is more likely to have authored a tweet"""
 
     user_set = pickle.dumps((user1_name, user2_name)) #  users sorted
     user1 = User.query.filter(User.name == user1_name).one()

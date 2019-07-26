@@ -103,6 +103,6 @@ def new_user():
     if answer == "n":
         print("Okay, if you would like to add a new user new_set_pull_bed(handle, count=200)")
 
-# TODO write some useful functions
+# TODO write some more useful functions
 
 
