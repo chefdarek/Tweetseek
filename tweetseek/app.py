@@ -51,7 +51,7 @@ def create_app():
     def user(name=None):
         message = ''
         # import pdb; pdb.set_trace() sets the  python debugger
-        name = name or request.values['username']
+        name = name or request.values['user_name']
         try:
             if request.method == 'POST':
                 add_or_update_user(name)
