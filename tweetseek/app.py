@@ -1,5 +1,5 @@
 from decouple import config
-from flask import Flask, render_template #request will need to be added later
+from flask import Flask, render_template, request
 from .models import DB, User
 from .twitter import *
 
@@ -35,7 +35,7 @@ def create_app():
     def about():
         """creates a list of users from the SQLDB and renders renders the about.html page."""
 
-        users = User.query.all()  #DB query for SQL
+        users = User.query.all()  # DB query for SQL
 
         return render_template("about.html", title='About', users=users)
 
@@ -50,8 +50,8 @@ def create_app():
     @app.route("/user/<name>", methods=['GET'])
     def user(name=None):
         message = ''
-        #import pdb; pdb.set_trace() sets the  python debugger
-        name = name or request.values['user_name']
+        # import pdb; pdb.set_trace() sets the  python debugger
+        name = name or request.values['username']
         try:
             if request.method == 'POST':
                 add_or_update_user(name)
@@ -59,9 +59,10 @@ def create_app():
             tweets = User.query.filter(User.name == name).one().tweets
 
         except Exception as e:
-            pass
+            message = 'Error adding {}:{}'.format(name, e)
+            tweets = []
         return render_tempate('user.html', title=name, tweets=tweets,
-                               message=message)
+                              message=message)
 
     return app
 

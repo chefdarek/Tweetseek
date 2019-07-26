@@ -61,7 +61,7 @@ def new_set_pull_bed(handle, count=200):
 
     print(f"{handle} was put in the Database, with {count} tweets and embedded")
 
-def add_or_update_user(name):
+def add_or_update_user(username):
     """for the html request add or update err if no or private user"""
     try:
         twitter_user = TWITTER.get_user(username) #  API queries to database
@@ -76,10 +76,10 @@ def add_or_update_user(name):
             # this will update the newest tweet id or not if none
             db_user.newest_tweet_id = tweets[0].id
         for tweet in tweets:
-            #get embedding for tweet and store in db
+            #  get embedding for tweet and store in db
             embedding = BASILICA.embed_sentence(tweet.full_text,
-                                                mode='twitter')
-            db_tweet = Tweet(id=tweet.id, tweet=tweet.full_text[:500],
+                                                model='twitter')
+            db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:500],
                              embedding=embedding)
             db_user.tweets.append(db_tweet)
             DB.session.add(db_tweet)

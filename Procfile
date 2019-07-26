@@ -1,1 +1,1 @@
-web: gunicorn tweetseek:create_app
+web: gunicorn tweetseek:APP

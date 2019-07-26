@@ -1,52 +1,24 @@
 <!DOCTYPE html>
-<HTML>
-<link rel="stylesheet" href="https://unpkg.com/picnic"><HEAD>
+<html>
+  <head>
+    <title>TwitOff! - {{title}}</title>
+    <!-- CSS, keywords, metadata goes here -->
+  </head>
 
-<TITLE>TweekSeek : Home</TITLE>
+  <body>
+    <h1>TwitOff!</h1>
+    <p>Content for TwitOff will go here...</p>
 
-
-<div>
-    <style>
-        body {
-        width:100%;
-        height:100%;
-        border-radius: 50%;
-        padding-bottom:100%;
-        background-image: url("http://pluspng.com/img-png/bird-hd-png-bird-bluebird-bird-png-nature-perched-isolated-960.png"),
-        url('https://i.gifer.com/JEMe.gif');
-        background-position: top;
-        background-repeat: no-repeat;
-        position: relative;
-
-
-}
-    </style>
-</div>
-
-</HEAD>
-
-<!-- <form action="http://127.0.0.1:5000/about" method="get" target="_blank"> -->
-    <button type="http://127.0.0.1:5000/about" "padding: 5x 10px;">About</button><br>
-</form>
-
-<H1>Twits captured</H1>
-
-  <ul>
+    {% block content %}
+     <ul>
         {% for user in users %}
-        <li>{{user.name }}</li>
+        <li>{{ user.id }} - {{user.name }}</li>
         {% endfor %}
-  </ul>
-<H2>
-    <fieldset class="flex two">
-        <label><input type="User 1" placeholder="User 1"></label>
-        <label><input type="User 2" placeholder="User 2"></label>
-    </fieldset>
-    <textarea placeholder="Enter Tweet Here"></textarea>
-
-
-</H2>
-<HR>
-
-
-
-</HTML> 
+    </ul>
+    <form>
+      <input type='text' name='user_name' placeholder="User to add">
+      <input type="submit" value="Add User">
+    </form>
+    {% endblock %}
+  </body>
+</html>
