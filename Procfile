@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT tweetseek:APP
+web: gunicorn tweetseek:create_app

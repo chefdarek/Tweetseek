@@ -14,7 +14,7 @@ basilica = "*"
 python-dotenv = "*"
 scikit-learn = "*"
 heroku = "*"
-waitress = "*"
+gunicorn = "*"
 pyscopg2-binary = "*"
 
 [requires]
