@@ -7,13 +7,14 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-tweepy = "*"
-flask-sqlalchemy = "*"
-python-decouple = "*"
 basilica = "*"
+flask-sqlalchemy = "*"
+tweepy = "*"
+python-decouple = "*"
 python-dotenv = "*"
 scikit-learn = "*"
-heroku = "*"
 gunicorn = "*"
+pyscopg2-binary = "*"
+
 [requires]
 python_version = "3.7"
