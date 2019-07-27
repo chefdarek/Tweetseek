@@ -46,16 +46,18 @@ def create_app():
         DB.create_all()
         return render_template('home.html', title='DB Reset!', users=[])
 
-    @app.route("/user", methods=['POST', 'GET'])
+    @app.route("/user", methods=['POST'])
+    @app.route("/user<name>", methods=['GET'])
     def user(name=None):
-        message = 'Adding user'
-        import pdb; pdb.set_trace() #sets the  python debugger
-        name = name or request.values['user_name']
+        message = ''
+        name = request.values['user_name']
         try:
             if request.method == 'POST':
                 add_or_update_user(name)
                 message = 'User {} successfully added'.format(name)
             tweets = User.query.filter(User.name == name).one().tweets
+            import pdb;
+            pdb.set_trace()  # sets the  python debugger
 
         except Exception as e:
             message = 'Error adding {}:{}'.format(name, e)
