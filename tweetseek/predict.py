@@ -1,5 +1,5 @@
 from .models import User
-from twitter import BASILICA
+from .twitter import BASILICA
 import pickle
 import numpy as np
 from sklearn.linear_model import LogisticRegression

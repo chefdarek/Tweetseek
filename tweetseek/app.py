@@ -1,6 +1,6 @@
 from decouple import config
 from flask import Flask, render_template, request
-from .models import DB, User
+from .models import *
 from .twitter import *
 
 
@@ -46,11 +46,10 @@ def create_app():
         DB.create_all()
         return render_template('home.html', title='DB Reset!', users=[])
 
-    @app.route("/user", methods=['POST'])
-    @app.route("/user/<name>", methods=['GET'])
+    @app.route("/user", methods=['POST', 'GET'])
     def user(name=None):
-        message = ''
-        # import pdb; pdb.set_trace() sets the  python debugger
+        message = 'Adding user'
+        import pdb; pdb.set_trace() #sets the  python debugger
         name = name or request.values['user_name']
         try:
             if request.method == 'POST':
@@ -61,7 +60,7 @@ def create_app():
         except Exception as e:
             message = 'Error adding {}:{}'.format(name, e)
             tweets = []
-        return render_tempate('user.html', title=name, tweets=tweets,
+        return render_template('user.html', title=name, tweets=tweets,
                               message=message)
 
     return app

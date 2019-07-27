@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e410c7f0-1afd-4633-a1b0-455de4de3013" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Tweetseek.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tweetseek.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/twitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/twitter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +26,7 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="Python Stub" />
       </list>
     </option>
   </component>
@@ -30,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Pipfile.lock" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">

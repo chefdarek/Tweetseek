@@ -68,7 +68,7 @@ def add_or_update_user(username):
         db_user = (User.query.get(twitter_user.id))  #  API Query to see if they exist
         DB.session.add(db_user)
         #  want as many recent non-retweet/reply statuses
-        tweets = twitteruser.timeline(
+        tweets = twitter_user.timeline(
             count=200, exclude_replies=True, include_rts=False,
             tweet_mode='extended', since_id=db_user.newest_tweet_id)
 
@@ -83,6 +83,7 @@ def add_or_update_user(username):
                              embedding=embedding)
             db_user.tweets.append(db_tweet)
             DB.session.add(db_tweet)
+            DB.session.commit()
     except Exception as e:
         print('Error processing {}: {}'.format(username, e))
         raise e
