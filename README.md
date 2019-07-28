@@ -6,6 +6,12 @@ Collect Tweets from those users
 Submit theoretical tweets and compare if one of two Twits
 would be most likely to have twuoted it.
 
+Pipenv
+
+Follow this link to activate on mac
+
+https://darektidwell.com/install-pipfile-from-github-and-setting-up-a-pipenv-environment-on-mac/
+
 Flask
 
 -in project folder flask shell to access DB
@@ -37,5 +43,5 @@ HTML
 
 Home & About Page place holders
 
-![Sunset](sunset.gif)
+![Sunset](https://media.giphy.com/media/vB7WSUfplJahO/giphy.gif)
 =======
