@@ -1,7 +1,7 @@
 """Retrieve Tweets, embeddings, and persist the database
     to add new user call new_user()
     to get user information or "status" at Flask shell >>> twitter_user = TWITTER.get_user('Austen')
-    >>>  #twitter_user
+    twitter_user
     to get user tweets tweets = twitter_user.timeline()
     limit is 200 and default is 20 tweets
     to get specific tweets tweets[0].text shows the first sent back

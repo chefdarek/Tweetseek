@@ -56,14 +56,13 @@ def create_app():
                 add_or_update_user(name)
                 message = 'User {} successfully added'.format(name)
             tweets = User.query.filter(User.name == name).one().tweets
-            import pdb;
-            pdb.set_trace()  # sets the  python debugger
+            #import pdb;
+            #pdb.set_trace()  # sets the  python debugger
 
         except Exception as e:
             message = 'Error adding {}:{}'.format(name, e)
             tweets = []
-        return render_template('user.html', title=name, tweets=tweets,
-                              message=message)
+        return render_template('user.html', title=name, tweets=tweets, message=message)
 
     return app
 
