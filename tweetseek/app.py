@@ -50,19 +50,19 @@ def create_app():
     @app.route("/user<name>", methods=['GET'])
     def user(name=None):
         message = ''
-        name = request.values['user_name']
+        thisone = request.values['user_name']
         try:
             if request.method == 'POST':
-                new_set_pull_bed(name)
-                message = 'User {} successfully added'.format(name)
-            tweets = User.query.filter(User.name == name)
+                new_set_pull_bed(thisone)
+                message = 'User {} successfully added'.format(thisone)
+            tweets = User.query.filter(User.name == thisone).tweets
             #import pdb;
             #pdb.set_trace()  # sets the  python debugger
 
         except Exception as e:
-            message = 'Error adding {}:{}'.format(name, e)
+            message = 'Error adding {}:{}'.format(thisone, e)
             tweets = []
-        return render_template('user.html', title=name, tweets=tweets, message=message)
+        return render_template('user.html', title=thisone, tweets=tweets, message=message)
 
     return app
 

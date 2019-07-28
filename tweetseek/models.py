@@ -32,7 +32,7 @@ class Tweet(DB.Model):
     embedding = DB.Column(DB.PickleType, nullable=False)
 
     user_id = DB.Column(DB.BigInteger, DB.ForeignKey('user.id'), nullable=False)
-    user = DB.relationship('User', backref=DB.backref('tweets'), lazy=True)
+    user = DB.relationship('User', backref=DB.backref('tweets'), lazy="select")
 
     def __repr__(self):
         """Returns and identified Tweet object and content of the object"""
