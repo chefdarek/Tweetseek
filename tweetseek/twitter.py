@@ -56,39 +56,43 @@ def new_set_pull_bed(handle, count=200):
         DB.session.add(db_tweet)
         db_user.tweets.append(db_tweet)
 
+    if tweets:
+        # this will update the newest tweet id or not if none
+        db_user.newest_tweet_id = tweets[0].id
+
     DB.session.add(db_user)
     DB.session.commit()
 
     print(f"{handle} was put in the Database, with {count} tweets and embedded")
 
-def add_or_update_user(username):
-    """for the html request add or update err if no or private user"""
-    try:
-        twitter_user = TWITTER.get_user(username) #  API queries to database
-        db_user = (User.query.get(twitter_user.id))  #  API Query to see if they exist
-        DB.session.add(db_user)
-        #  want as many recent non-retweet/reply statuses
-        tweets = twitter_user.timeline(
-            count=200, exclude_replies=True, include_rts=False,
-            tweet_mode='extended', since_id=db_user.newest_tweet_id)
-
-        if tweets:
-            # this will update the newest tweet id or not if none
-            db_user.newest_tweet_id = tweets[0].id
-        for tweet in tweets:
-            #  get embedding for tweet and store in db
-            embedding = BASILICA.embed_sentence(tweet.full_text,
-                                                model='twitter')
-            db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:500],
-                             embedding=embedding)
-            db_user.tweets.append(db_tweet)
-            DB.session.add(db_tweet)
-            DB.session.commit()
-    except Exception as e:
-        print('Error processing {}: {}'.format(username, e))
-        raise e
-    else:
-        DB.session.commit()
+# def add_or_update_user(username):
+#     """for the html request add or update err if no or private user"""
+#     try:
+#         twitter_user = TWITTER.get_user(username) #  API queries to database
+#         db_user = (User.query.get(twitter_user.id))  #  API Query to see if they exist
+#         DB.session.add(db_user)
+#         #  want as many recent non-retweet/reply statuses
+#         tweets = twitter_user.timeline(
+#             count=200, exclude_replies=True, include_rts=False,
+#             tweet_mode='extended', since_id=db_user.newest_tweet_id)
+#
+#         if tweets:
+#             # this will update the newest tweet id or not if none
+#             db_user.newest_tweet_id = tweets[0].id
+#         for tweet in tweets:
+#             #  get embedding for tweet and store in db
+#             embedding = BASILICA.embed_sentence(tweet.full_text,
+#                                                 model='twitter')
+#             db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:500],
+#                              embedding=embedding)
+#             db_user.tweets.append(db_tweet)
+#             DB.session.add(db_tweet)
+#             DB.session.commit()
+#     except Exception as e:
+#         print('Error processing {}: {}'.format(username, e))
+#         raise e
+#     else:
+#         DB.session.commit()
 
 def new_user():
     """prompt to run Q&A for DB user entry"""

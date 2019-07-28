@@ -53,9 +53,9 @@ def create_app():
         name = request.values['user_name']
         try:
             if request.method == 'POST':
-                add_or_update_user(name)
+                new_set_pull_bed(name)
                 message = 'User {} successfully added'.format(name)
-            tweets = User.query.filter(User.name == name).one().tweets
+            tweets = User.query.filter(User.name == name)
             #import pdb;
             #pdb.set_trace()  # sets the  python debugger
 
