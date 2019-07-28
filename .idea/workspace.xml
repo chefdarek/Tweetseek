@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e410c7f0-1afd-4633-a1b0-455de4de3013" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tweetseek/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweetseek/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweetseek/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tweetseek/twitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tweetseek/twitter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

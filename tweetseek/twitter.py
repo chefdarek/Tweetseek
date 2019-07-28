@@ -43,22 +43,26 @@ BASILICA = basilica.Connection(config('BASILICA_KEY'))
 
 def new_set_pull_bed(handle, count=200):
     """Creates a new user and grabs 200 tweets, embeddings"""
+    try:
 
-    twitter_user = TWITTER.get_user(handle)
-    tweets = twitter_user.timeline(
-        count=count, exclude_replies=True,
-        include_rts=False, tweet_mode='extended')
-    db_user = User(id=twitter_user.id, name=twitter_user.screen_name,
-                   newest_tweet_id=tweets[0].id)
-    for tweet in tweets:
-        embedding = BASILICA.embed_sentence(tweet.full_text, model='twitter')
-        db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:500], embedding=embedding)
-        DB.session.add(db_tweet)
-        db_user.tweets.append(db_tweet)
+        twitter_user = TWITTER.get_user(handle)
+        tweets = twitter_user.timeline(
+            count=count, exclude_replies=True,
+            include_rts=False, tweet_mode='extended')
+        db_user = User(id=twitter_user.id, name=twitter_user.screen_name,
+                       newest_tweet_id=tweets[0].id)
+        for tweet in tweets:
+            embedding = BASILICA.embed_sentence(tweet.full_text, model='twitter')
+            db_tweet = Tweet(id=tweet.id, text=tweet.full_text[:500], embedding=embedding)
+            DB.session.add(db_tweet)
+            db_user.tweets.append(db_tweet)
 
-    if tweets:
-        # this will update the newest tweet id or not if none
-        db_user.newest_tweet_id = tweets[0].id
+        if tweets:
+            # this will update the newest tweet id or not if none
+            db_user.newest_tweet_id = tweets[0].id
+    except Exception as e:
+        print(f"Error adding {handle}, this could be because they are already in the system")
+        raise e
 
     DB.session.add(db_user)
     DB.session.commit()

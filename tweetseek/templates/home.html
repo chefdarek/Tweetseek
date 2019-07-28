@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://unpkg.com/picnic">
 <html>
   <head>
     <title>Tweetseek! - {{title}}</title>
@@ -8,6 +9,7 @@
   <body>
     <h1>Tweetseek!</h1>
     <p>Add twitter handles for ML magic...</p>
+    <h3>Users being tracked</h3>
 
     {% block content %}
      <ul>
@@ -19,6 +21,16 @@
       <input type='text' name='user_name' placeholder="User to add">
       <input type="submit" value="Add User">
     </form>
+    <h3>Twho said Twhat?</h3>
+    <h5>compare a tweets author between two real twunts using ML </h5>
+     <form>
+        <fieldset class="flex two">
+            <label><input type="text" name="user1_name" placeholder="Twunt 1"></label>
+            <label><input type="text" placeholder="Twunt 2" name="user2_name"></label>
+
+            <textarea placeholder="Tweet "></textarea>
+            <input type="submit" value="Submit">
+     </form>
     {% endblock %}
   </body>
 </html>
