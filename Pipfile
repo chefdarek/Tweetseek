@@ -14,6 +14,6 @@ python-decouple = "*"
 python-dotenv = "*"
 scikit-learn = "*"
 gunicorn = "*"
-
+pillow = ">=6.2.0"
 [requires]
 python_version = "3.7"
